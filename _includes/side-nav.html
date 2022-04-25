@@ -1,10 +1,10 @@
 {% for item in site.nav %}
 	<div class="header">
-    {% if item.url %}<a href="{{item.url}}" target="{%if item.target == 'blank' %}_blank{% endif %}">{{ item.title }}1</a>
-    {% elsif item.path %}<a href="{{ site.baseurl }}{{ item.path }}" target="{%if item.target == 'blank' %}_blank{% endif %}">{{ item.title }}2</a>
-    {% else %}{{ item.title }}3{% endif %}
+    {% if item.url %}<a href="{{item.url}}" target="{%if item.target == 'blank' %}_blank{% endif %}">{{ item.title }}</a><a href="#" onclick="return open('{{ item.title }}');">&gt;</a>
+    {% elsif item.path %}<a href="{{ site.baseurl }}{{ item.path }}" target="{%if item.target == 'blank' %}_blank{% endif %}">{{ item.title }}</a><a href="#" onclick="return open('{{ item.title }}');">&gt;</a>
+    {% else %}{{ item.title }}{% endif %}
 	</div>
-	<nav class="nav flex-column">
+	<nav class="nav flex-column" id="{{ item.title }}">
     {% if item.subnav %}
       {% include nav.html nav=item.subnav %}
     {% endif %}
