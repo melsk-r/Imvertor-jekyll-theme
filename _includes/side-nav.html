@@ -1,9 +1,9 @@
 {% for item in site.nav %}
 	<div class="header">
-    {% case condition %}
-      {% when item.url %}
+    {% case item.type %}
+      {% when 'url' %}
         <a href="{{item.url}}" target="{%if item.target == 'blank' %}_blank{% endif %}">{{ item.title }}1</a>
-      {% when item.path %}
+      {% when'path' %}
         <a href="{{ site.baseurl }}{{ item.path }}" target="{%if item.target == 'blank' %}_blank{% endif %}">{{ item.title }}2</a>
       {% else %}
         {{ item.title }}3
