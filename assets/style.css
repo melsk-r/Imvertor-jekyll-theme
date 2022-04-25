@@ -119,6 +119,7 @@ em {
     margin-bottom: 0rem;
 }
 .header {
+    display: none;
     margin-top: 20px;
     color: #03A9F4;
 }
