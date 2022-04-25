@@ -96,7 +96,7 @@ a {
     color: #1a237e;
     text-decoration: underline;
 }
-nav_colapsable a {
+nav_colapsable {
   display: none;
   text-decoration: none;
 }
