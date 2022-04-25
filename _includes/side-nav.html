@@ -1,7 +1,7 @@
 {% for item in site.nav %}
 	<div class="header">
-    {% if item.url %}<a href="{{item.url}}" target="{%if item.target == 'blank' %}_blank{% endif %}">{{ item.title }}</a><a href="#" onclick="return open('test');">&gt;</a>
-    {% elsif item.path %}<a href="{{ site.baseurl }}{{ item.path }}" target="{%if item.target == 'blank' %}_blank{% endif %}">{{ item.title }}</a><a href="#" onclick="return open('test');">&gt;</a>
+    {% if item.url %}<a href="{{item.url}}" target="{%if item.target == 'blank' %}_blank{% endif %}">{{ item.title }}</a><!--<a href="#" onclick="return open('test');">&gt;</a-->
+    {% elsif item.path %}<a href="{{ site.baseurl }}{{ item.path }}" target="{%if item.target == 'blank' %}_blank{% endif %}">{{ item.title }}</a><!--<a href="#" onclick="return open('test');">&gt;</a-->
     {% else %}{{ item.title }}{% endif %}
 	</div>
      <!--   <div {% if item.url %}class="navigation"{% elsif item.path %}class="navigation"{% endif %} id="test"> -->
