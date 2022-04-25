@@ -6,8 +6,6 @@
 		{% elseif item.path %}
 			<a href="{{ site.baseurl }}{{ item.path }}" 
 			target="{%if item.target == 'blank' %}_blank{% endif %}">{{ item.title }}</a>
-		{% elseif item.title %}
-			{{ item.title }}
 		{% endif %}
 	</div>
 	<nav class="nav flex-column">
