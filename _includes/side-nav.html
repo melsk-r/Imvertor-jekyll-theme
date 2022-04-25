@@ -4,8 +4,8 @@
     {% elsif item.path %}<a href="{{ site.baseurl }}{{ item.path }}" target="{%if item.target == 'blank' %}_blank{% endif %}">{{ item.title }}</a><a href="#" onclick="return open('{{ item.title }}');">&gt;</a>
     {% else %}{{ item.title }}{% endif %}
 	</div>
-        <div class="navigation">
-	  <nav class="{% if item.url %}nav_colapsable{% elsif item.path %}nav_colapsable{% else %}nav{% endif %} flex-column" id="{{ item.title }}">
+        <div {% if item.url %}class="navigation"{% elsif item.path %}class="navigation"{% endif %} id="{{ item.title }}">
+	  <nav class="nav flex-column">
       {% if item.subnav %}
         {% include nav.html nav=item.subnav %}
       {% endif %}
