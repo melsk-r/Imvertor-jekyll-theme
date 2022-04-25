@@ -2,11 +2,11 @@
 	<div class="header">
     {% case condition %}
       {% when item.url %}
-        <a href="{{item.url}}" target="{%if item.target == 'blank' %}_blank{% endif %}">{{ item.title }}</a>
+        <a href="{{item.url}}" target="{%if item.target == 'blank' %}_blank{% endif %}">{{ item.title }}1</a>
       {% when item.path %}
-        <a href="{{ site.baseurl }}{{ item.path }}" target="{%if item.target == 'blank' %}_blank{% endif %}">{{ item.title }}</a>
+        <a href="{{ site.baseurl }}{{ item.path }}" target="{%if item.target == 'blank' %}_blank{% endif %}">{{ item.title }}2</a>
       {% else %}
-        {{ item.title }}
+        {{ item.title }}3
     {% endcase %}
 	</div>
 	<nav class="nav flex-column">
