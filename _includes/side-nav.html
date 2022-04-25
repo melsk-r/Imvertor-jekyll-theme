@@ -1,5 +1,7 @@
 {% for item in site.nav %}
-	<div class="header">{{ item.title }}</div>
+	<div class="header">
+    {% if item.url %}<a href="{{item.url}}" target="{%if item.target == 'blank' %}_blank{% endif %}">{{ item.title }}</a>{% elseif item.path %}<a href="{{ site.baseurl }}{{ item.path }}" target="{%if item.target == 'blank' %}_blank{% endif %}">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}
+	</div>
 	<nav class="nav flex-column">
     {% if item.subnav %}
       {% include nav.html nav=item.subnav %}
