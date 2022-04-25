@@ -1,13 +1,8 @@
 {% for item in site.nav %}
 	<div class="header">
-    {% case item.type %}
-      {% when 'url' %}
-        <a href="{{item.url}}" target="{%if item.target == 'blank' %}_blank{% endif %}">{{ item.title }}1</a>
-      {% when'path' %}
-        <a href="{{ site.baseurl }}{{ item.path }}" target="{%if item.target == 'blank' %}_blank{% endif %}">{{ item.title }}2</a>
-      {% else %}
-        {{ item.title }}3
-    {% endcase %}
+    {% if item.url %}<a href="{{item.url}}" target="{%if item.target == 'blank' %}_blank{% endif %}">{{ item.title }}1</a>
+    {% elsif item.path %}<a href="{{ site.baseurl }}{{ item.path }}" target="{%if item.target == 'blank' %}_blank{% endif %}">{{ item.title }}2</a>
+    {% else %}{{ item.title }}3{% endif %}
 	</div>
 	<nav class="nav flex-column">
     {% if item.subnav %}
